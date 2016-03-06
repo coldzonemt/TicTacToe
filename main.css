@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	flex-direction: column;
+	font-size: 32px;
 }
 
 h1 {
@@ -8,10 +8,31 @@ h1 {
 }
 
 .board {
-	flex-grow: 1;
-	width: 75%;
-	display: flex; 
-	flex-direction: row;
-	margin-right: 25%; 
-	margin-left: 25%;
+	display: flex;
+	justify-content: center;
+	empty-cells: show;	
 }
+
+tr {
+	display: flex;
+	justify-content: space-between;
+	height: 200px;
+	border: solid red;
+}
+
+td {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+	padding: 0.5rem;
+	border: solid blue;
+}
+
+.column-0, .column-1 {
+	border-right: black solid;
+}
+
+.row-0, .row-1 {
+	border-bottom: black solid;
+}
+

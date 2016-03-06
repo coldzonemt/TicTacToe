@@ -2,32 +2,24 @@
   <html>
   <head>
     <title>Let's Play!</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel='stylesheet' href='main.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script>
   </head>
- <body ngApp="Game">
-  <script src="app.js"></script>
-  
-  <h1>Tic Tac Toe</h1>
-  
-  <!-- The board is really a 3x3 table -->
-  <table class="board">
-    <tr class="row-0">
-      <td class="0-0">0</td>
-      <td class="0-1">1</td>
-      <td class="0-2">2</td>
-    </tr>
-    <tr class="row-1">
-      <td class="1-0">3</td>
-      <td class="1-1">4</td>
-      <td class="1-2">5</td>
-    </tr>
-    <tr class="row-2">
-      <td class="2-0">6</td>
-      <td class="2-1">7</td>
-      <td class="2-2">8</td>
-    </tr>
+ <body ng-app='TicTacToe' ng-controller='game'>
 
-  </table>
+ <div ng-view></div>
+
+ <script src='app.js'></script>  
+ 
+	  <h1>Tic Tac Toe</h1>
+
+	  <table class='board'>
+	  	<tr ng-repeat='row in rows'>
+	  		<td ng-repeat='column in columns'>
+	  			{{row}},{{column}}
+	  		</td>
+	  	</tr>
+	  </table>
 
 </body>
 
