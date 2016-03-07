@@ -28,11 +28,9 @@ td {
 	border: solid blue;
 }
 
-.column-0, .column-1 {
-	border-right: black solid;
-}
-
-.row-0, .row-1 {
-	border-bottom: black solid;
+button { 
+	vertical-align: center;
+	width: 150px; 
+	height: 150px;
 }
 

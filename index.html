@@ -14,9 +14,9 @@
 	  <h1>Tic Tac Toe</h1>
 
 	  <table class='board'>
-	  	<tr ng-repeat='row in rows'>
-	  		<td ng-repeat='column in columns'>
-	  			{{row}},{{column}}
+	  	<tr ng-repeat='row in [0,1,2]'>
+	  		<td ng-repeat='column in [0,1,2]' class='cell' ng-click='playTurn()'>
+	  			<button class="unclicked"></button>
 	  		</td>
 	  	</tr>
 	  </table>
